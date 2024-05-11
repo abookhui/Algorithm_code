@@ -1,4 +1,5 @@
 # Minion Walk gold 5
+# 틀림 
 
 from collections import deque
 
@@ -21,7 +22,7 @@ for test_case in range(tc):
         graph.append(tmp)
 
     que = deque()
-    que.append([0,0])
+    if graph[0][0] == 'O': que.append([0,0])
 
     while que:
         x,y = que.popleft()
@@ -55,7 +56,7 @@ for test_case in range(tc):
         print('+---'* w+'+')
     
 
-    if visited[h-1][w-1]: print("Minions can cross the room")
+    if visited[h-1][w-1] and graph[0][0]=='O' :  print("Minions can cross the room")
     else : print("Minions cannot cross the room")
 
     
