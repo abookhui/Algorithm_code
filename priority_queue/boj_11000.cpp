@@ -1,4 +1,4 @@
-// boj_11000 강의실
+// boj_11000 강의실 배정
 #include<iostream>
 #include<vector>
 #include<algorithm>

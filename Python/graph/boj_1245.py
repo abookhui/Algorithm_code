@@ -7,9 +7,7 @@ arr = []
 dx = [1,-1,0,0,-1,-1,1,1]
 dy = [0,0,1,-1,-1,1,1,-1]
 
-
-
-def Mountain(x,y): # dfs 
+def Mountain(x,y): 
     stack = []
     stack.append([x,y])
     chk =True
@@ -31,20 +29,16 @@ def Mountain(x,y): # dfs
     if chk : return True
     else : return False
 
-
-
 for i in range(n):
     arr.append(list(map(int,input().split())))
 cnt =0
 visited = [[False] *m for _ in range(n)]
-#top =[]
+
 for i in range(n):
     for j in range(m):
         if not visited[i][j] and  Mountain(i,j) and not arr[i][j]==0: 
-            #top.append([i,j])
             cnt+=1  
 
-#print(top)
 print(cnt)
 
 # 반례
